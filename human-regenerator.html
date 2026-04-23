@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="cs" data-i18n-title="hr.title">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human Regenerator — Refresh Studio Kadaň</title>
+  <meta name="description" content="Human Regenerator v Kadani — jediný přístroj v Ústeckém kraji. Technologie studené atmosférické plazmy podporuje regeneraci buněk, zmírňuje bolesti a zvyšuje vitalitu.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link" data-i18n="nav.skip_link">Přeskočit na obsah</a>
+
+  <!-- ====== HEADER / NAVIGACE ====== -->
+  <header class="site-header" id="navbar">
+    <div class="header-inner">
+
+      <a href="index.html" class="site-logo">
+        <img src="https://aqua-opossum-124745.hostingersite.com/wp-content/uploads/2026/04/Navrh-bez-nazvu-49.png" alt="Refresh Studio Kadaň — logo">
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Hlavní navigace">
+        <ul class="main-nav__list">
+          <li><a href="index.html"             class="main-nav__link" data-i18n="nav.about">O nás</a></li>
+          <li><a href="human-regenerator.html" class="main-nav__link main-nav__link--active" data-i18n="nav.hr">Human Regenerator</a></li>
+          <li><a href="ems-kegel-chair.html"   class="main-nav__link" data-i18n="nav.kegel">EMS Kegel Chair</a></li>
+          <li><a href="masaze.html"            class="main-nav__link" data-i18n="nav.masaze">Masáže</a></li>
+          <li><a href="cenik.html"             class="main-nav__link" data-i18n="nav.cenik">Ceník / Poukazy</a></li>
+          <li><a href="kontakt.html"           class="main-nav__link" data-i18n="nav.kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <div class="social-icons">
+          <a href="#" class="social-icons__link" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="#" class="social-icons__link" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="#" class="social-icons__link" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="#" class="social-icons__link" aria-label="Google Recenze"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></a>
+        </div>
+
+        <div class="header-phone">
+          <span class="header-phone__label" data-i18n="nav.phone_label">Pro objednání volejte</span>
+          <a href="tel:+420777938915">+420&nbsp;777&nbsp;938&nbsp;915</a>
+        </div>
+
+        <div class="lang-switch" aria-label="Language">
+          <a href="#" data-lang="cs" class="lang-active">CS</a>
+          <a href="#" data-lang="en">EN</a>
+          <a href="#" data-lang="de">DE</a>
+          <a href="#" data-lang="pl">PL</a>
+        </div>
+
+        <button type="button" class="nav-toggle" data-i18n-aria="a11y.menu" aria-label="Otevřít menu" aria-expanded="false" aria-controls="mainNav">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ====== MAIN ====== -->
+  <main id="main">
+
+    <!-- ====== PAGE HERO ====== -->
+    <section class="page-hero section--dark">
+      <div class="container">
+        <span class="page-hero__tag" data-i18n="hr.hero.tag">Naše hlavní terapie</span>
+        <h1 data-i18n="hr.hero.h1" data-i18n-html="1">Human <em>Regenerator</em></h1>
+        <p class="page-hero__subtitle" data-i18n="hr.hero.sub">Jediný přístroj v celém Ústeckém kraji — dostupný exkluzivně v&nbsp;Kadani</p>
+      </div>
+    </section>
+
+    <!-- ====== INTRO ====== -->
+    <section class="content-block reveal">
+      <div class="container">
+        <div class="content-block__grid">
+
+          <div class="content-block__media">
+            <img src="images/hr/DSC02122.jpg" alt="Klientka během terapie Human Regenerator" width="600" height="450">
+          </div>
+
+          <div class="content-block__body">
+            <span class="hr-feature__badge" data-i18n="hr.intro.badge">Exkluzivně v Kadani</span>
+            <h2 data-i18n="hr.intro.h2" data-i18n-html="1">Nabijte své tělo energií s <em>Human Regeneratorem</em></h2>
+            <p data-i18n="hr.intro.p1">Human Regenerator představuje revoluci ve wellness technologiích. Využívá moderní vědecké principy, technologii studené atmosférické plazmy (CAP+), anionty a jemné elektrostatické pole, které podporují regeneraci organismu na nejhlubší možné úrovni — na úrovni buněk.</p>
+            <p data-i18n="hr.intro.p2">Tato technologie vznikla na základě let výzkumu v oblasti buněčné revitalizace a neuro-regenerace. Výsledkem je jedinečná metoda, která pomáhá tam, kde běžné postupy často nestačí.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== BENEFITS ====== -->
+    <section class="section section--beige reveal">
+      <div class="container">
+        <span class="section-label" data-i18n="hr.ben.label">Benefity</span>
+        <h2 data-i18n="hr.ben.h2" data-i18n-html="1">Co Human Regenerator <em>dokáže</em>?</h2>
+
+        <div class="features-grid">
+
+          <div class="feature-item">
+            <div class="feature-item__icon"><img src="images/icons/2.png" alt="" width="32" height="32"></div>
+            <div>
+              <h3 data-i18n="hr.ben.b1.h">Ulevuje od zánětů a bolestí</h3>
+              <p data-i18n="hr.ben.b1.p">Určitý typ studené atmosférické plazmy podporuje hojení zánětů, tkání, vazů i&nbsp;drobných poranění. Ideální pro sportovce, chronické bolesti zad, kloubů, svalů.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon"><img src="images/icons/1.png" alt="" width="32" height="32"></div>
+            <div>
+              <h3 data-i18n="hr.ben.b2.h">Zvyšuje energii a vitalitu</h3>
+              <p data-i18n="hr.ben.b2.p">Tělo se doslova „dobíjí" jako baterie — příliv elektronů neutralizuje volné radikály, snižuje oxidační stres a&nbsp;zlepšuje fungování buněk.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon"><img src="images/icons/7.png" alt="" width="32" height="32"></div>
+            <div>
+              <h3 data-i18n="hr.ben.b3.h">Zlepšuje kvalitu spánku a snižuje stres</h3>
+              <p data-i18n="hr.ben.b3.p">Klienti popisují klidnější mysl, lepší usínání, hlubší spánek a&nbsp;celkové zklidnění nervového systému.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon"><img src="images/icons/icon-mozek.svg" alt="" width="32" height="32"></div>
+            <div>
+              <h3 data-i18n="hr.ben.b4.h">Podporuje mozek a kognitivní funkce</h3>
+              <p data-i18n="hr.ben.b4.p">CAP+ technologie podporuje neuro-regeneraci, lepší koncentraci, kognitivní funkce a&nbsp;pomáhá i&nbsp;při neurodegenerativních stavech včetně Alzheimerovy choroby (doplňková podpora).</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon"><img src="images/icons/3.png" alt="" width="32" height="32"></div>
+            <div>
+              <h3 data-i18n="hr.ben.b5.h">Posiluje imunitní systém</h3>
+              <p data-i18n="hr.ben.b5.p">Pomáhá tělu bojovat s&nbsp;viry a&nbsp;bakteriemi, podporuje rychlejší návrat do formy po nemoci či zátěži.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon"><img src="images/icons/icon-dna.svg" alt="" width="32" height="32"></div>
+            <div>
+              <h3 data-i18n="hr.ben.b6.h">Zpomaluje stárnutí</h3>
+              <p data-i18n="hr.ben.b6.p">Neutralizací volných radikálů dochází k&nbsp;výraznému snížení oxidačního stresu — hlavní příčiny stárnutí buněk. Když tělo neoxiduje, nestárne.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item__icon"><img src="images/icons/5.png" alt="" width="32" height="32"></div>
+            <div>
+              <h3 data-i18n="hr.ben.b7.h">Zrychluje regeneraci po sportu</h3>
+              <p data-i18n="hr.ben.b7.p">Sportovci zaznamenávají rychlejší rekonvalescenci, ústup bolesti a&nbsp;lepší výkon.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== BENEFITS MARQUEE ====== -->
+    <div class="benefits-strip" aria-hidden="true">
+      <div class="benefits-track">
+        <span data-i18n="mq.bunecna">Buněčná regenerace</span>
+        <span data-i18n="mq.energie">Více energie</span>
+        <span data-i18n="mq.spanek">Hlubší spánek</span>
+        <span data-i18n="mq.bolest">Zmírnění bolesti</span>
+        <span data-i18n="mq.stres">Redukce stresu</span>
+        <span data-i18n="mq.lehkost">Pocit lehkosti</span>
+        <span data-i18n="mq.omlazeni">Omlazení</span>
+        <span data-i18n="mq.hojeni">Rychlejší hojení</span>
+        <span data-i18n="mq.bunecna">Buněčná regenerace</span>
+        <span data-i18n="mq.energie">Více energie</span>
+        <span data-i18n="mq.spanek">Hlubší spánek</span>
+        <span data-i18n="mq.bolest">Zmírnění bolesti</span>
+        <span data-i18n="mq.stres">Redukce stresu</span>
+        <span data-i18n="mq.lehkost">Pocit lehkosti</span>
+        <span data-i18n="mq.omlazeni">Omlazení</span>
+        <span data-i18n="mq.hojeni">Rychlejší hojení</span>
+      </div>
+    </div>
+
+    <!-- ====== HOW IT WORKS ====== -->
+    <section class="content-block reveal">
+      <div class="container">
+        <span class="section-label" data-i18n="hr.how.label">Jak to funguje</span>
+        <h2 data-i18n="hr.how.h2" data-i18n-html="1">Jak Human Regenerator <em>funguje</em>?</h2>
+
+        <div class="content-block__grid">
+
+          <div class="content-block__body">
+            <p data-i18n="hr.how.intro">Celý proces začíná jemným elektrostatickým polem, které obklopí klienta a&nbsp;začne přenášet energii do těla.</p>
+
+            <ol class="steps">
+              <li data-i18n="hr.how.s1">Přístroj generuje anionty a&nbsp;elektrony, které aktivují regenerační procesy</li>
+              <li data-i18n="hr.how.s2">Energie proniká do celého těla i&nbsp;přes oblečení</li>
+              <li data-i18n="hr.how.s3">CAP+ technologie zajišťuje rovnoměrnou a&nbsp;hlubokou distribuci energie</li>
+              <li data-i18n="hr.how.s4">Tělo si „bere" přesně to, co potřebuje</li>
+            </ol>
+
+            <p data-i18n="hr.how.feels" data-i18n-html="1"><strong>Klient během terapie cítí:</strong></p>
+            <ul class="benefits-list">
+              <li data-i18n="hr.how.f1">Jemné brnění</li>
+              <li data-i18n="hr.how.f2">Lehké mravenčení</li>
+              <li data-i18n="hr.how.f3">Příjemný „ozonový vánek"</li>
+              <li data-i18n="hr.how.f4">Většinu lidí uvede do meditativního nebo spánkového stavu</li>
+            </ul>
+          </div>
+
+          <div class="content-block__media">
+            <img src="images/hr/DSC01834.jpg" alt="Průběh terapie Human Regenerator v Refresh Studiu" width="600" height="450">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== RESULTS ====== -->
+    <section class="section section--beige reveal">
+      <div class="container">
+        <span class="section-label" data-i18n="hr.res.label">Výsledky</span>
+        <h2 data-i18n="hr.res.h2" data-i18n-html="1">Jaké výsledky klienti <em>nejčastěji</em> popisují?</h2>
+
+        <div class="content-block__grid">
+
+          <div>
+            <h3 data-i18n="hr.res.col1.h">Hned po prvních aplikacích:</h3>
+            <ul class="benefits-list">
+              <li data-i18n="hr.res.col1.l1">Více energie</li>
+              <li data-i18n="hr.res.col1.l2">Citelné snížení bolesti a&nbsp;zánětů</li>
+              <li data-i18n="hr.res.col1.l3">Klidnější mysl, lepší nálada</li>
+              <li data-i18n="hr.res.col1.l4">Mnohem kvalitnější spánek</li>
+              <li data-i18n="hr.res.col1.l5">Rychlejší hojení a&nbsp;regenerace</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 data-i18n="hr.res.col2.h">Už po pár návštěvách:</h3>
+            <ul class="benefits-list">
+              <li data-i18n="hr.res.col2.l1">Lepší fyzický výkon</li>
+              <li data-i18n="hr.res.col2.l2">Rychlejší rekonvalescence</li>
+              <li data-i18n="hr.res.col2.l3">Ústup únavy</li>
+              <li data-i18n="hr.res.col2.l4">Celková lehkost a&nbsp;pocit „restartu"</li>
+              <li data-i18n="hr.res.col2.l5">Výrazné zlepšení vitality, imunity i&nbsp;psychického stavu</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="section-cta">
+          <a href="kontakt.html" class="btn btn--primary btn--large" data-i18n="hr.res.cta">Objednat terapii</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PHOTO GALLERY ====== -->
+    <section class="section reveal">
+      <div class="container">
+        <span class="section-label" data-i18n="hr.gal.label">Naše studio</span>
+        <h2 data-i18n="hr.gal.h2" data-i18n-html="1">Pohled do <em>Refresh Studia</em></h2>
+
+        <div class="photo-gallery">
+          <img src="images/hr/DSC01167.jpg" alt="Refresh Studio Kadaň — interiér" width="400" height="300" loading="lazy">
+          <img src="images/hr/DSC01181.jpg" alt="Refresh Studio Kadaň — prostor pro terapie" width="400" height="300" loading="lazy">
+          <img src="images/hr/DSC01196.jpg" alt="Refresh Studio Kadaň — detail přístroje" width="400" height="300" loading="lazy">
+          <img src="images/hr/DSC01770.jpg" alt="Refresh Studio Kadaň — přístroj Human Regenerator" width="400" height="300" loading="lazy">
+          <img src="images/hr/DSC02070.jpg" alt="Refresh Studio Kadaň — prostředí studia" width="400" height="300" loading="lazy">
+          <img src="images/hr/DSC02133.jpg" alt="Refresh Studio Kadaň — relaxační zóna" width="400" height="300" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== VIDEO REVIEWS ====== -->
+    <section class="section section--beige reveal">
+      <div class="container">
+        <span class="section-label" data-i18n="hr.vid.label">Video recenze</span>
+        <h2 data-i18n="hr.vid.h2" data-i18n-html="1">Co říkají naši <em>klienti</em></h2>
+
+        <div class="video-reviews__grid">
+          <div class="video-reviews__item"><iframe src="https://www.youtube.com/embed/2hAQZZhc5zk" title="Video recenze klienta 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div class="video-reviews__item"><iframe src="https://www.youtube.com/embed/kSNC6Zf4ELU" title="Video recenze klienta 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div class="video-reviews__item"><iframe src="https://www.youtube.com/embed/xK7J2CejUV4" title="Video recenze klienta 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div class="video-reviews__item"><iframe src="https://www.youtube.com/embed/QOkIC-DnBgc" title="Video recenze klienta 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div class="video-reviews__item"><iframe src="https://www.youtube.com/embed/d_08Bb4hf7o" title="Video recenze klienta 5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div class="video-reviews__item"><iframe src="https://www.youtube.com/embed/5oj27gC_BUE" title="Video recenze klienta 6" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div class="video-reviews__item"><iframe src="https://www.youtube.com/embed/kb1yeuTaYC0" title="Video recenze klienta 7" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div class="video-reviews__item"><iframe src="https://www.youtube.com/embed/GLLm2OI0qDI" title="Video recenze klienta 8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FAQ ====== -->
+    <section class="section reveal">
+      <div class="container">
+        <span class="section-label" data-i18n="hr.faq.label">Časté dotazy</span>
+        <h2 class="text-center" data-i18n="hr.faq.h2" data-i18n-html="1">Na co se klienti <em>nejčastěji</em> ptají</h2>
+
+        <div class="faq">
+
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span data-i18n="hr.faq.q1">Pro koho je Human Regenerator vhodný?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                <p data-i18n="hr.faq.q1.a1">Human Regenerator je vhodný pro ženy, muže i&nbsp;děti všech věkových kategorií. Terapie je neinvazivní a&nbsp;zcela pasivní — stačí si 30&nbsp;minut v&nbsp;klidu lehnout. Je určen pro celkovou regeneraci organismu na fyzické i&nbsp;mentální úrovni, pro zlepšení fyzické kondice, vitality a&nbsp;kvality spánku. Dále je vhodný jako podpůrná terapie pro klienty se syndromem vyhoření, dlouhodobým stresem, úzkostmi nebo psychickým vyčerpáním. Pomáhá také při chronických bolestech, po úrazech a&nbsp;operacích, ke zmírnění zánětů, ke snížení oxidačního stresu a&nbsp;pro podporu imunity.</p>
+                <p data-i18n="hr.faq.q1.a2">Pomáhá i&nbsp;lidem s&nbsp;dlouhodobými následky po covidu. Může být využíván také jako doprovodná a&nbsp;podpůrná metoda u&nbsp;seniorů, při Alzheimerově chorobě, Parkinsonově nemoci a&nbsp;stařecké demenci — vždy jako doplněk lékařské péče, kterou nenahrazuje.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span data-i18n="hr.faq.q2">Jak Human Regenerator funguje?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                <p data-i18n="hr.faq.q2.a">Zařízení vytváří elektrostatické pole, které obklopuje uživatele a&nbsp;přenáší anionty a&nbsp;elektrony přímo do buněk. Tento proces stimuluje regeneraci buněk, urychluje hojení ran a&nbsp;zánětů, podporuje detoxikaci a&nbsp;pomáhá neutralizovat volné radikály. To vede ke zlepšení celkového zdraví a&nbsp;vitality.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span data-i18n="hr.faq.q3">Opravdu to funguje? Existují studie?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                <p data-i18n="hr.faq.q3.a">Ano, opravdu to funguje. Německá společnost System 4 Technologies GmbH představila světu první Human Regenerátory před více jak deseti lety v&nbsp;Abu Dhabí a&nbsp;způsobila tím revoluci v&nbsp;boji proti stárnutí a&nbsp;následkům degenerace. Existuje celá řada klinických studií, které jednoznačně potvrzují funkčnost a&nbsp;přínos terapie Human Regenerator.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span data-i18n="hr.faq.q4">Je používání Human Regenerator bezpečné?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                <p data-i18n="hr.faq.q4.a">Ano, používání Human Regenerator je zcela bezpečné. Technologie CAP je úspěšně využívána v&nbsp;medicíně již desítky let. Zařízení bylo navíc důkladně testováno a&nbsp;je certifikováno pro bezpečné použití. Terapie je zcela neinvazivní a&nbsp;Váš zdravotní stav nemůže v&nbsp;žádném případě zhoršit.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span data-i18n="hr.faq.q5">Je někdo, pro koho Human Regenerator není vhodný?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                <p data-i18n="hr.faq.q5.a">Pro osoby s&nbsp;elektronickými zdravotními implantáty, jako jsou kardiostimulátory, implantovaná naslouchátka nebo implantované insulinové pumpy. Elektrostatické pole může interferovat s&nbsp;funkcí těchto zařízení. Také terapii nedoporučujeme absolvovat těhotným ženám.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span data-i18n="hr.faq.q6">Kolik terapií je potřeba k dosažení výsledku?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                <p data-i18n="hr.faq.q6.a">Vše je velmi individuální. Pro nastavení optimálního počtu terapií doporučujeme telefonickou konzultaci. Někteří klienti pociťují výrazný efekt již po první terapii, u&nbsp;většiny se však požadovaný výsledek dostavuje po absolvování 3–5&nbsp;terapií. Pro dlouhodobé udržení ideálního stavu je následně vhodné docházet na terapii pravidelně, například jednou měsíčně.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span data-i18n="hr.faq.q7">Jak dlouho trvá jedna terapie?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                <p data-i18n="hr.faq.q7.a">Jedna terapie trvá 30&nbsp;minut. Klient pouze leží na lůžku a&nbsp;relaxuje. Není k&nbsp;tomu potřeba žádná fyzická aktivita ani potřeba udržet pozornost.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span data-i18n="hr.faq.q8">Hradí terapie pojišťovna?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                <p data-i18n="hr.faq.q8.a">Bohužel v&nbsp;současné době zdravotní pojišťovny na terapie na přístroji Human Regenerator nepřispívají, a&nbsp;proto je cena terapie hrazena v&nbsp;plné výši klientem. Velmi si přejeme, aby se tato situace v&nbsp;budoucnu změnila.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button type="button" class="faq__question" aria-expanded="false">
+              <span data-i18n="hr.faq.q9">Kde se nachází Vaše studio?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                <p data-i18n="hr.faq.q9.a">Nacházíme se v&nbsp;Kadani (okres Chomutov, Ústecký kraj), ulice 1. máje 1536, 1. patro.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CTA BAND ====== -->
+    <section class="cta-band">
+      <div class="container">
+        <h2 data-i18n="hr.cta.h2" data-i18n-html="1">Připraveni na <em>změnu</em>?</h2>
+        <p class="cta-band__text" data-i18n="hr.cta.p">Objednejte se na terapii a&nbsp;zažijte rozdíl na vlastní kůži.</p>
+        <a href="kontakt.html" class="btn btn--primary btn--large" data-i18n="hr.cta.btn">Objednat se</a>
+        <a href="tel:+420777938915" class="cta-band__phone">+420&nbsp;777&nbsp;938&nbsp;915</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="site-logo">
+            <img src="https://aqua-opossum-124745.hostingersite.com/wp-content/uploads/2026/04/Navrh-bez-nazvu-49.png" alt="Refresh Studio Kadaň">
+          </a>
+          <p data-i18n="footer.about">Refresh Studio v&nbsp;Kadani nabízí komplexní regeneraci pro tělo i&nbsp;mysl. Moderní technologie a&nbsp;tradiční postupy v&nbsp;příjemném prostředí.</p>
+        </div>
+        <div class="footer-links">
+          <h3 class="footer-heading" data-i18n="footer.heading_nav">Navigace</h3>
+          <ul class="footer-links__list">
+            <li><a href="index.html"             class="footer-links__link" data-i18n="nav.about">O nás</a></li>
+            <li><a href="human-regenerator.html" class="footer-links__link" data-i18n="nav.hr">Human Regenerator</a></li>
+            <li><a href="ems-kegel-chair.html"   class="footer-links__link" data-i18n="nav.kegel">EMS Kegel Chair</a></li>
+            <li><a href="masaze.html"            class="footer-links__link" data-i18n="nav.masaze">Masáže</a></li>
+            <li><a href="cenik.html"             class="footer-links__link" data-i18n="nav.cenik">Ceník / Poukazy</a></li>
+            <li><a href="kontakt.html"           class="footer-links__link" data-i18n="nav.kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3 class="footer-heading" data-i18n="footer.heading_kontakt">Kontakt</h3>
+          <p>Šárka Becková</p>
+          <p><a href="https://maps.google.com/?q=1.+m%C3%A1je+1536,+Kada%C5%88" target="_blank" rel="noopener noreferrer">1. máje 1536 (1. patro)<br>432 01 Kadaň</a></p>
+          <p><a href="tel:+420777938915">+420&nbsp;777&nbsp;938&nbsp;915</a></p>
+          <p><a href="mailto:sarka@refreshstudio.cz">sarka@refreshstudio.cz</a></p>
+          <p>IČO: 67844910</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-bottom__copy" data-i18n="footer.copyright">&copy; 2026 Refresh Studio Kadaň. Všechna práva vyhrazena.</p>
+        <div class="social-icons">
+          <a href="#" class="social-icons__link" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="#" class="social-icons__link" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="#" class="social-icons__link" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="#" class="social-icons__link" aria-label="Google Recenze"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====== FLOATING CTA + BACK TO TOP ====== -->
+  <div class="floating-cta" id="floatingCta">
+    <a href="kontakt.html" class="floating-cta-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.11 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      <span data-i18n="cta_pill.objednat">Objednat se</span>
+    </a>
+    <a href="#" class="back-to-top" data-i18n-aria="a11y.back_to_top" aria-label="Zpět nahoru" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/accordion.js"></script>
+  <script src="js/i18n.js"></script>
+
+</body>
+</html>

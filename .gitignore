@@ -1,0 +1,30 @@
+# Screenshots & ad-hoc test artifacts (regenerable, not part of site)
+shots/
+
+# Source brief (13 MB binary, not needed in repo — keep locally as reference)
+HUMANREG.odt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (if any tooling is added later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Vercel CLI local cache
+.vercel/
+
+# Stray shell-expansion artifacts
+shots${f}.png
+UsersHPhuman-regshotscrops/
