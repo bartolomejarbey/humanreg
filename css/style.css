@@ -43,8 +43,8 @@
   /* Layout */
   --container-max: 1200px;
   --container-padding: 1.5rem;
-  --section-padding: 6.25rem 0;
-  --section-padding-mobile: 4rem 0;
+  --section-padding: 4.5rem 0;
+  --section-padding-mobile: 3rem 0;
   --nav-height: 78px;
   --nav-height-scrolled: 64px;
 
@@ -449,7 +449,7 @@ strong {
 .main-nav__list {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: clamp(1rem, 0.5rem + 1vw, 1.75rem);
   list-style: none;
 }
 
@@ -459,7 +459,7 @@ strong {
   padding: 0.5rem 0 0.5rem 0;
   color: rgba(255, 255, 255, 0.8);
   font-family: var(--font-body);
-  font-size: 0.78125rem;
+  font-size: clamp(0.6875rem, 0.6rem + 0.3vw, 0.78125rem);
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -534,7 +534,7 @@ strong {
 
 .header-phone__label {
   display: block;
-  font-size: 0.5625rem;
+  font-size: clamp(0.5rem, 0.45rem + 0.15vw, 0.5625rem);
   font-weight: 500;
   color: rgba(255, 255, 255, 0.35);
   text-transform: uppercase;
@@ -546,7 +546,7 @@ strong {
   color: var(--lime);
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 0.9375rem;
+  font-size: clamp(0.8125rem, 0.7rem + 0.4vw, 0.9375rem);
   letter-spacing: 0.01em;
 }
 
@@ -566,7 +566,7 @@ strong {
 
 .lang-switch a {
   font-family: var(--font-body);
-  font-size: 0.6875rem;
+  font-size: clamp(0.625rem, 0.55rem + 0.2vw, 0.6875rem);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -755,6 +755,16 @@ strong {
 .footer-about .site-logo img {
   height: 44px;
   filter: brightness(0) invert(1);
+}
+
+/* Nové footer logo (6-3.png) má čtvercový aspect ratio se širokým whitespacem,
+   proto vyšší max-height kompenzuje optickou velikost značky uvnitř PNG. */
+.footer-about .site-logo--footer img {
+  height: auto;
+  width: auto;
+  max-height: 120px;
+  max-width: 240px;
+  margin-left: -1rem;
 }
 
 .footer-links__list {
@@ -1119,4 +1129,20 @@ strong {
 .video-cinema__close:hover {
   border-color: var(--lime);
   color: var(--lime);
+}
+
+/* --- Mobilní doladění (C5) --- */
+@media (max-width: 768px) {
+  .lang-switch a {
+    padding: 0.5rem 0.625rem;
+  }
+  .social-icons__link {
+    width: 38px;
+    height: 38px;
+  }
+  h1, h2, h3 {
+    hyphens: auto;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
 }
