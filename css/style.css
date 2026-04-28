@@ -762,9 +762,24 @@ strong {
 .footer-about .site-logo--footer img {
   height: auto;
   width: auto;
-  max-height: 120px;
+  max-height: 240px;
+  max-width: 480px;
+  margin-left: -2rem;
+}
+
+/* Stejné logo v navbaru — zvětšené tak, aby vizuálně dominovalo i přes
+   whitespace v PNG, ale s negative margin, aby výška navbar zůstala stejná.
+   Filter invert dělá z dark textu/profilů bílou siluetu pro dark navbar. */
+.site-header .site-logo--nav img {
+  height: 140px;
+  width: auto;
   max-width: 240px;
-  margin-left: -1rem;
+  margin: -40px 0;
+  filter: brightness(0) invert(1);
+}
+.site-header.scrolled .site-logo--nav img {
+  height: 120px;
+  margin: -35px 0;
 }
 
 .footer-links__list {
