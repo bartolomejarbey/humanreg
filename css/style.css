@@ -635,6 +635,13 @@ strong {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* Default (>1024px) — mobile-nav-cta se nezobrazí.
+   Definice MUSÍ být PŘED @media blokem, jinak by později definovaná
+   default rule přepsala display:flex z media query. */
+.mobile-nav-cta {
+  display: none;
+}
+
 /* Mobile nav — fullscreen overlay below navbar */
 @media (max-width: 1024px) {
   .header-inner {
@@ -746,10 +753,11 @@ strong {
   }
 }
 
-/* Default — mobile-nav-cta se na desktopu nezobrazí */
-.mobile-nav-cta {
-  display: none;
-}
+/* Default (desktop >1024px) — mobile-nav-cta se nezobrazí.
+   POZN: pravidlo musí být PŘED @media (max-width: 1024px) blokem v CSS,
+   jinak by override v media query nefungoval kvůli stejné specificitě
+   a později definované rule by vyhrála. Protože tento default je nyní
+   PŘED media bloky, mobile rule (display: flex) v @media wins on mobile. */
 
 /* Velmi malé telefony — iPhone SE, Galaxy A */
 @media (max-width: 480px) {
