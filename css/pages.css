@@ -1101,4 +1101,48 @@
   .price-section--featured {
     padding: 2rem 1.25rem;
   }
+
+  /* CTA band — menší padding + font na mobilu */
+  .cta-band {
+    padding: 3rem 0;
+  }
+  .cta-band h2 {
+    font-size: 1.625rem;
+  }
+  .cta-band__text {
+    font-size: 0.9375rem;
+  }
+  .cta-band--photo {
+    min-height: 360px;
+  }
+  .cta-band--photo h2 {
+    font-size: 1.625rem;
+  }
+
+  /* Page hero — menší typografie na mobilu */
+  .page-hero {
+    padding: 4rem 0 3rem;
+  }
+  .page-hero h1 {
+    font-size: 2.25rem;
+  }
+  .page-hero__subtitle {
+    font-size: 0.9375rem;
+  }
+
+  /* Voucher banner — méně padding */
+  .voucher-banner {
+    padding: 1.75rem 1.25rem;
+  }
+
+  /* Section labels readable */
+  .section-label {
+    font-size: 0.625rem;
+  }
+
+  /* Sekce s velkými marginama — zúžit container padding */
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
 }
