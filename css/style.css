@@ -770,20 +770,21 @@ strong {
 /* Stejné logo v navbaru — výrazně větší. Negative margin udržuje výšku
    navbaru stejnou (logo overflowuje vizuálně, ale nepushne ostatní elementy).
    Filter invert dělá z dark textu/profilů bílou siluetu pro dark navbar. */
-.site-header .site-logo--nav {
+.site-header .site-logo.site-logo--nav {
   overflow: visible;
+  z-index: 10;
 }
-.site-header .site-logo--nav img {
-  height: 350px;
-  width: auto;
-  max-width: none;
-  margin: -145px 0;
+.site-header .site-logo.site-logo--nav img {
+  height: 350px !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: -145px 0 !important;
   filter: brightness(0) invert(1);
-  pointer-events: auto;
+  transition: none;
 }
-.site-header.scrolled .site-logo--nav img {
-  height: 300px;
-  margin: -125px 0;
+.site-header.scrolled .site-logo.site-logo--nav img {
+  height: 300px !important;
+  margin: -125px 0 !important;
 }
 
 .footer-links__list {
