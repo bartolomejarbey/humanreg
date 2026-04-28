@@ -4,12 +4,13 @@
    card, HR spotlight with glow halos, story, reviews, green CTA banner.
    ========================================================================== */
 
-/* --- HERO — Fullwidth video s contain (žádný crop, logo na konci se nezakryje) --- */
+/* --- HERO — fullsize video, AR set z JS po loadedmetadata --- */
 .hero {
   position: relative;
   width: 100%;
-  /* Aspect ratio match videa (16:9). Hero se vertikálně přizpůsobí
-     šířce viewportu; na 1920×1080 monitoru = ~100vh, na ultrawide menší. */
+  /* Default 16/9 fallback — JS to přepíše skutečným AR videa po načtení.
+     Tím dosáhneme: žádné černé pruhy + žádný crop (cover na perfektní AR
+     kontejner = identický s contain). */
   aspect-ratio: 16 / 9;
   min-height: 540px;
   max-height: 100vh;
@@ -33,7 +34,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;  /* celé video viditelné, žádný crop loga na konci */
+  object-fit: cover;  /* s aspect-ratio přesně podle videa = bez crop, bez bars */
   border: 0;
 }
 

@@ -77,4 +77,21 @@
     heroVideo.pause();
     heroVideo.removeAttribute("autoplay");
   }
+
+  /* --- Hero AR sync: nastav aspect-ratio kontejneru přesně podle videa.
+     Tím dosáhneme: žádné černé pruhy (jako u contain), žádný crop loga
+     (jako u cover) — protože kontejner má přesný AR videa. --- */
+  var heroEl = document.querySelector(".hero");
+  if (heroVideo && heroEl) {
+    var setAspect = function () {
+      if (heroVideo.videoWidth > 0 && heroVideo.videoHeight > 0) {
+        heroEl.style.aspectRatio = heroVideo.videoWidth + " / " + heroVideo.videoHeight;
+      }
+    };
+    if (heroVideo.readyState >= 1) {
+      setAspect();
+    } else {
+      heroVideo.addEventListener("loadedmetadata", setAspect);
+    }
+  }
 })();
