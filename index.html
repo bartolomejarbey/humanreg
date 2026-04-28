@@ -12,9 +12,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css?v=20260428-3">
-  <link rel="stylesheet" href="css/pages.css?v=20260428-3">
-  <link rel="stylesheet" href="css/index.css?v=20260428-3">
+  <link rel="stylesheet" href="css/style.css?v=20260428-4">
+  <link rel="stylesheet" href="css/pages.css?v=20260428-4">
+  <link rel="stylesheet" href="css/index.css?v=20260428-4">
 </head>
 <body>
 
@@ -32,8 +32,17 @@
         <ul class="main-nav__list">
           <li><a href="index.html"             class="main-nav__link main-nav__link--active" data-i18n="nav.about">O nás</a></li>
           <li><a href="human-regenerator.html" class="main-nav__link" data-i18n="nav.hr">Human Regenerator</a></li>
-          <li><a href="ems-kegel-chair.html"   class="main-nav__link" data-i18n="nav.kegel">EMS Kegel Chair</a></li>
-          <li><a href="masaze.html"            class="main-nav__link" data-i18n="nav.masaze">Masáže</a></li>
+          <li class="main-nav__item--dropdown">
+            <button type="button" class="main-nav__link main-nav__dropdown-toggle" aria-expanded="false" aria-haspopup="true" data-i18n="nav.services">
+              Služby
+              <svg class="main-nav__chevron" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <ul class="main-nav__dropdown" role="menu">
+              <li role="none"><a href="ems-kegel-chair.html" class="main-nav__dropdown-link" role="menuitem" data-i18n="nav.kegel">EMS Kegel Chair</a></li>
+              <li role="none"><a href="masaze.html" class="main-nav__dropdown-link" role="menuitem" data-i18n="nav.masaze">Masáže</a></li>
+              <li role="none"><a href="nuskin.html" class="main-nav__dropdown-link" role="menuitem" data-i18n="nav.nuskin">Nu Skin</a></li>
+            </ul>
+          </li>
           <li><a href="cenik.html"             class="main-nav__link" data-i18n="nav.cenik">Ceník / Poukazy</a></li>
           <li><a href="kontakt.html"           class="main-nav__link" data-i18n="nav.kontakt">Kontakt</a></li>
         </ul>

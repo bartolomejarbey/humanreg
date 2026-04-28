@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css?v=20260428-3">
-  <link rel="stylesheet" href="css/pages.css?v=20260428-3">
+  <link rel="stylesheet" href="css/style.css?v=20260428-4">
+  <link rel="stylesheet" href="css/pages.css?v=20260428-4">
 </head>
 <body>
 
@@ -26,8 +26,17 @@
         <ul class="main-nav__list">
           <li><a href="index.html"             class="main-nav__link" data-i18n="nav.about">O nás</a></li>
           <li><a href="human-regenerator.html" class="main-nav__link" data-i18n="nav.hr">Human Regenerator</a></li>
-          <li><a href="ems-kegel-chair.html"   class="main-nav__link main-nav__link--active" data-i18n="nav.kegel">EMS Kegel Chair</a></li>
-          <li><a href="masaze.html"            class="main-nav__link" data-i18n="nav.masaze">Masáže</a></li>
+          <li class="main-nav__item--dropdown">
+            <button type="button" class="main-nav__link main-nav__dropdown-toggle main-nav__link--active" aria-expanded="false" aria-haspopup="true" data-i18n="nav.services">
+              Služby
+              <svg class="main-nav__chevron" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <ul class="main-nav__dropdown" role="menu">
+              <li role="none"><a href="ems-kegel-chair.html" class="main-nav__dropdown-link main-nav__dropdown-link--active" role="menuitem" data-i18n="nav.kegel">EMS Kegel Chair</a></li>
+              <li role="none"><a href="masaze.html" class="main-nav__dropdown-link" role="menuitem" data-i18n="nav.masaze">Masáže</a></li>
+              <li role="none"><a href="nuskin.html" class="main-nav__dropdown-link" role="menuitem" data-i18n="nav.nuskin">Nu Skin</a></li>
+            </ul>
+          </li>
           <li><a href="cenik.html"             class="main-nav__link" data-i18n="nav.cenik">Ceník / Poukazy</a></li>
           <li><a href="kontakt.html"           class="main-nav__link" data-i18n="nav.kontakt">Kontakt</a></li>
         </ul>
@@ -85,8 +94,8 @@
             <h2 data-i18n="ems.intro.h2" data-i18n-html="1">Neinvazivní, pohodlná a <em>vysoce účinná</em> metoda posílení pánevního dna</h2>
             <p data-i18n="ems.intro.p">Sednete si, zrelaxujete… a&nbsp;židle udělá práci za Vás. Ideální pro ženy i&nbsp;muže, kteří chtějí řešit problémy s&nbsp;pánevním dnem rychle, efektivně a&nbsp;bez cvičení.</p>
           </div>
-          <div class="content-block__media content-block__media--icon">
-            <img src="images/icons/icon-kegel.svg" alt="EMS Kegel Chair — ikona pánevního dna">
+          <div class="content-block__media">
+            <img src="images/ems-kegel/DSC01209.jpg" alt="EMS Kegel Chair v Refresh Studiu — pohled na židli" loading="lazy">
           </div>
         </div>
       </div>
@@ -95,15 +104,22 @@
     <!-- ====== HOW IT WORKS ====== -->
     <section class="section section--beige reveal">
       <div class="container">
-        <span class="section-label" data-i18n="ems.how.label">Princip</span>
-        <h2 data-i18n="ems.how.h2" data-i18n-html="1">Jak EMS Kegel Chair <em>funguje</em>?</h2>
-        <p data-i18n="ems.how.intro">EMS Kegel Chair využívá fokální elektromagnetickou stimulaci (FMS), která intenzivně aktivuje svaly pánevního dna — a&nbsp;to mnohem silněji, než je možné při běžném Kegel cvičení.</p>
-        <ul class="benefits-list">
-          <li data-i18n="ems.how.l1">Až 11&nbsp;000 kontrakcí během jedné 30min terapie</li>
-          <li data-i18n="ems.how.l2">Hloubková aktivace svalů, které běžně nejde vědomě zapojit</li>
-          <li data-i18n="ems.how.l3">Bez bolesti, bez pocení, bez svlékání — stačí si sednout</li>
-          <li data-i18n="ems.how.l4">Působí přes oblečení a&nbsp;je naprosto bezpečná</li>
-        </ul>
+        <div class="content-block__grid">
+          <div class="content-block__body">
+            <span class="section-label" data-i18n="ems.how.label">Princip</span>
+            <h2 data-i18n="ems.how.h2" data-i18n-html="1">Jak EMS Kegel Chair <em>funguje</em>?</h2>
+            <p data-i18n="ems.how.intro">EMS Kegel Chair využívá fokální elektromagnetickou stimulaci (FMS), která intenzivně aktivuje svaly pánevního dna — a&nbsp;to mnohem silněji, než je možné při běžném Kegel cvičení.</p>
+            <ul class="benefits-list">
+              <li data-i18n="ems.how.l1">Až 11&nbsp;000 kontrakcí během jedné 30min terapie</li>
+              <li data-i18n="ems.how.l2">Hloubková aktivace svalů, které běžně nejde vědomě zapojit</li>
+              <li data-i18n="ems.how.l3">Bez bolesti, bez pocení, bez svlékání — stačí si sednout</li>
+              <li data-i18n="ems.how.l4">Působí přes oblečení a&nbsp;je naprosto bezpečná</li>
+            </ul>
+          </div>
+          <div class="content-block__media">
+            <img src="images/ems-kegel/DSC01203.jpg" alt="EMS Kegel Chair s ovládacím přístrojem v Refresh Studiu" loading="lazy">
+          </div>
+        </div>
       </div>
     </section>
 
@@ -172,16 +188,23 @@
     <!-- ====== HOW PROCEDURE WORKS ====== -->
     <section class="section section--beige reveal">
       <div class="container">
-        <span class="section-label" data-i18n="ems.proc.label">Průběh</span>
-        <h2 data-i18n="ems.proc.h2" data-i18n-html="1">Jak terapie <em>probíhá</em>?</h2>
-        <ol class="steps">
-          <li data-i18n="ems.proc.s1">Přijdete v&nbsp;běžném oblečení</li>
-          <li data-i18n="ems.proc.s2">Posadíte se na židli</li>
-          <li data-i18n="ems.proc.s3">Cítíte příjemné stahy a&nbsp;vibrace v&nbsp;oblasti pánve</li>
-          <li data-i18n="ems.proc.s4">30 minut relaxujete</li>
-          <li data-i18n="ems.proc.s5">Odcházíte bez omezení, můžete ihned pokračovat ve svém dni</li>
-        </ol>
-        <p data-i18n="ems.proc.note" data-i18n-html="1"><strong>Doporučuje se série 6–10 ošetření podle potíží.</strong></p>
+        <div class="content-block__grid">
+          <div class="content-block__media">
+            <img src="images/ems-kegel/DSC01200.jpg" alt="Místnost s EMS Kegel Chair v Refresh Studiu Kadaň" loading="lazy">
+          </div>
+          <div class="content-block__body">
+            <span class="section-label" data-i18n="ems.proc.label">Průběh</span>
+            <h2 data-i18n="ems.proc.h2" data-i18n-html="1">Jak terapie <em>probíhá</em>?</h2>
+            <ol class="steps">
+              <li data-i18n="ems.proc.s1">Přijdete v&nbsp;běžném oblečení</li>
+              <li data-i18n="ems.proc.s2">Posadíte se na židli</li>
+              <li data-i18n="ems.proc.s3">Cítíte příjemné stahy a&nbsp;vibrace v&nbsp;oblasti pánve</li>
+              <li data-i18n="ems.proc.s4">30 minut relaxujete</li>
+              <li data-i18n="ems.proc.s5">Odcházíte bez omezení, můžete ihned pokračovat ve svém dni</li>
+            </ol>
+            <p data-i18n="ems.proc.note" data-i18n-html="1"><strong>Doporučuje se série 6–10 ošetření podle potíží.</strong></p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -202,16 +225,37 @@
     <!-- ====== WHY US ====== -->
     <section class="content-block reveal">
       <div class="container">
-        <span class="section-label" data-i18n="ems.us.label">Proč my</span>
-        <h2 data-i18n="ems.us.h2" data-i18n-html="1">Proč zvolit <em>právě naše studio</em>?</h2>
-        <ul class="benefits-list">
-          <li data-i18n="ems.us.l1">Moderní přístroj nové generace</li>
-          <li data-i18n="ems.us.l2">Diskrétní prostředí</li>
-          <li data-i18n="ems.us.l3">Zkušený personál, který vše vysvětlí</li>
-          <li data-i18n="ems.us.l4">Vhodné i&nbsp;jako kombinace s&nbsp;Human Regeneratorem pro celkovou regeneraci</li>
-        </ul>
-        <div class="cta-button-wrapper">
-          <a href="kontakt.html" class="btn btn--primary btn--large" data-i18n="ems.us.cta">Objednat se</a>
+        <div class="content-block__grid">
+          <div class="content-block__body">
+            <span class="section-label" data-i18n="ems.us.label">Proč my</span>
+            <h2 data-i18n="ems.us.h2" data-i18n-html="1">Proč zvolit <em>právě naše studio</em>?</h2>
+            <ul class="benefits-list">
+              <li data-i18n="ems.us.l1">Moderní přístroj nové generace</li>
+              <li data-i18n="ems.us.l2">Diskrétní prostředí</li>
+              <li data-i18n="ems.us.l3">Zkušený personál, který vše vysvětlí</li>
+              <li data-i18n="ems.us.l4">Vhodné i&nbsp;jako kombinace s&nbsp;Human Regeneratorem pro celkovou regeneraci</li>
+            </ul>
+            <div class="cta-button-wrapper">
+              <a href="kontakt.html" class="btn btn--primary btn--large" data-i18n="ems.us.cta">Objednat se</a>
+            </div>
+          </div>
+          <div class="content-block__media">
+            <img src="images/ems-kegel/DSC03984.jpg" alt="Šárka Becková konzultuje s klientem před terapií EMS Kegel Chair" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PHOTO GALLERY — Refresh Studio EMS Kegel ====== -->
+    <section class="section reveal">
+      <div class="container">
+        <span class="section-label" data-i18n="ems.gal.label">Naše studio</span>
+        <h2 data-i18n="ems.gal.h2" data-i18n-html="1">Pohled do <em>terapeutické místnosti</em></h2>
+        <div class="photo-gallery">
+          <img src="images/ems-kegel/DSC01210.jpg" alt="Detail EMS Kegel Chair LEFEEN" loading="lazy">
+          <img src="images/ems-kegel/DSC03985.jpg" alt="Šárka s ovládacím tabletem během terapie" loading="lazy">
+          <img src="images/ems-kegel/DSC03992.jpg" alt="Refresh Studio — kombinace EMS Kegel Chair s dalšími terapiemi" loading="lazy">
+          <img src="images/ems-kegel/DSC03997.jpg" alt="Klient po terapii EMS Kegel Chair" loading="lazy">
         </div>
       </div>
     </section>

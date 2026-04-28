@@ -19,6 +19,18 @@
     });
 
     mainNav.querySelectorAll(".main-nav__link").forEach(function (link) {
+      // Dropdown toggle (Služby) na mobilu se NEzavírá menu, jen expanduje sub-list
+      if (link.classList.contains("main-nav__dropdown-toggle")) return;
+      link.addEventListener("click", function () {
+        mainNav.classList.remove("is-open");
+        navToggle.classList.remove("is-active");
+        navToggle.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+      });
+    });
+
+    // Dropdown link uvnitř Služby — kliknutí zavře celé mobile menu
+    mainNav.querySelectorAll(".main-nav__dropdown-link").forEach(function (link) {
       link.addEventListener("click", function () {
         mainNav.classList.remove("is-open");
         navToggle.classList.remove("is-active");
@@ -36,6 +48,36 @@
       }
     });
   }
+
+  /* --- Služby dropdown toggle (klik = toggle aria-expanded) --- */
+  var dropdownToggles = document.querySelectorAll(".main-nav__dropdown-toggle");
+  dropdownToggles.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var expanded = btn.getAttribute("aria-expanded") === "true";
+      dropdownToggles.forEach(function (other) {
+        if (other !== btn) other.setAttribute("aria-expanded", "false");
+      });
+      btn.setAttribute("aria-expanded", String(!expanded));
+    });
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".main-nav__item--dropdown")) {
+      dropdownToggles.forEach(function (btn) {
+        btn.setAttribute("aria-expanded", "false");
+      });
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      dropdownToggles.forEach(function (btn) {
+        btn.setAttribute("aria-expanded", "false");
+      });
+    }
+  });
 
   /* --- Navbar scroll state + Floating CTA visibility --- */
   var header = document.querySelector(".site-header");

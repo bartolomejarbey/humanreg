@@ -1,5 +1,6 @@
 # Screenshots & ad-hoc test artifacts (regenerable, not part of site)
 shots/
+.screenshots/
 
 # Source brief (13 MB binary, not needed in repo — keep locally as reference)
 HUMANREG.odt

@@ -642,6 +642,76 @@ strong {
   display: none;
 }
 
+/* === SLUŽBY DROPDOWN v navbaru (desktop) === */
+.main-nav__item--dropdown {
+  position: relative;
+}
+.main-nav__dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: inherit;
+}
+.main-nav__chevron {
+  transition: transform 0.25s ease;
+  margin-top: 1px;
+}
+.main-nav__dropdown-toggle[aria-expanded="true"] .main-nav__chevron {
+  transform: rotate(180deg);
+}
+.main-nav__dropdown {
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  min-width: 220px;
+  background: rgba(14, 14, 14, 0.97);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  list-style: none;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s 0.25s;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+  z-index: 1100;
+}
+.main-nav__item--dropdown:hover .main-nav__dropdown,
+.main-nav__item--dropdown:focus-within .main-nav__dropdown,
+.main-nav__dropdown-toggle[aria-expanded="true"] + .main-nav__dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s 0s;
+}
+.main-nav__dropdown-link {
+  display: block;
+  padding: 0.625rem 1.25rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-family: var(--font-body);
+  font-size: 0.78125rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.25s ease, background-color 0.25s ease;
+  white-space: nowrap;
+}
+.main-nav__dropdown-link:hover,
+.main-nav__dropdown-link:focus-visible {
+  color: var(--lime);
+  background-color: rgba(160, 200, 20, 0.08);
+}
+.main-nav__dropdown-link--active {
+  color: var(--lime);
+}
+
 /* Mobile nav — fullscreen overlay below navbar */
 @media (max-width: 1024px) {
   .header-inner {
@@ -723,6 +793,54 @@ strong {
     width: 200px;
     height: 92px;
     margin-left: 0;
+  }
+
+  /* Služby dropdown na mobilu — inline, ne floating overlay */
+  .main-nav__item--dropdown {
+    width: 100%;
+  }
+  .main-nav__dropdown-toggle {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0.875rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--pure-white);
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .main-nav__dropdown {
+    position: static;
+    transform: none !important;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    background: transparent;
+    backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    min-width: 0;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .main-nav__dropdown-toggle[aria-expanded="true"] + .main-nav__dropdown {
+    max-height: 500px;
+    padding: 0.5rem 0 0.75rem;
+  }
+  .main-nav__dropdown-link {
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    text-transform: none;
+    font-family: var(--font-body);
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.7);
   }
 
   /* Mobile CTA na konci hamburger menu (telefon + Objednat tlačítko) */
