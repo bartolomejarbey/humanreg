@@ -782,15 +782,8 @@ strong {
     height: var(--nav-height);
   }
 
-  /* Logo redukce na tablet/mobil */
-  .site-header .site-logo.site-logo--nav {
-    width: 150px;
-    height: 56px;
-  }
-  .site-header.scrolled .site-logo.site-logo--nav {
-    width: 130px;
-    height: 48px;
-  }
+  /* Navbar logo responsive sizes jsou teď v dedikovaném bloku níž (kvůli
+     správnému source-order cascading proti base rule). Tady řešíme jen footer. */
   .footer-about .site-logo--footer {
     width: 200px;
     height: 92px;
@@ -881,14 +874,6 @@ strong {
 
 /* Velmi malé telefony — iPhone SE, Galaxy A */
 @media (max-width: 480px) {
-  .site-header .site-logo.site-logo--nav {
-    width: 120px;
-    height: 46px;
-  }
-  .site-header.scrolled .site-logo.site-logo--nav {
-    width: 110px;
-    height: 42px;
-  }
   .footer-about .site-logo--footer {
     width: 170px;
     height: 78px;
@@ -973,30 +958,54 @@ strong {
   transition: none;
 }
 
-/* === NAVBAR LOGO — analogický crop kontejner pro stejné PNG. === */
+/* === NAVBAR LOGO ===
+   refresh-studio-nav.png je tight-cropped (814×240, content-AR ~3.39),
+   pre-konvertovaná: černá → bílá, lime hlavy + list zachované.
+   Container AR ladí s content AR → object-fit: contain, žádný cropping,
+   žádný filter. Responsive sizes jsou ve stejném bloku za base rule, aby
+   source-order cascading správně přepsal base na malých viewportech. */
 .site-header .site-logo.site-logo--nav {
   display: block;
-  width: 200px;
-  height: 70px;
+  width: 268px;
+  height: 74px;
   flex-shrink: 0;
-  overflow: hidden;
   position: relative;
 }
 .site-header .site-logo.site-logo--nav img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 62%;
-  /* refresh-studio-nav.png je pre-convertovaná: černé → bílé, zelené zachované.
-     Filter NESMÍ být aktivní, jinak by zelené ztratily barvu. */
+  object-fit: contain;
+  object-position: left center;
   filter: none;
   transition: none;
   margin: 0;
   max-width: none;
 }
 .site-header.scrolled .site-logo.site-logo--nav {
-  width: 170px;
-  height: 56px;
+  width: 218px;
+  height: 60px;
+}
+
+@media (max-width: 1024px) {
+  .site-header .site-logo.site-logo--nav {
+    width: 230px;
+    height: 64px;
+  }
+  .site-header.scrolled .site-logo.site-logo--nav {
+    width: 196px;
+    height: 54px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header .site-logo.site-logo--nav {
+    width: 178px;
+    height: 50px;
+  }
+  .site-header.scrolled .site-logo.site-logo--nav {
+    width: 160px;
+    height: 44px;
+  }
 }
 
 .footer-links__list {
