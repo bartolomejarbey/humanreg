@@ -12,9 +12,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css?v=20260429-3">
-  <link rel="stylesheet" href="css/pages.css?v=20260429-3">
-  <link rel="stylesheet" href="css/index.css?v=20260429-3">
+  <link rel="stylesheet" href="css/style.css?v=20260429-4">
+  <link rel="stylesheet" href="css/pages.css?v=20260429-4">
+  <link rel="stylesheet" href="css/index.css?v=20260429-4">
 </head>
 <body>
 
@@ -100,9 +100,11 @@
     <!-- ====== HERO — Fullscreen video, clean → darken → fade-in ====== -->
     <section class="hero" id="uvod">
       <div class="hero__video-bg">
-        <video autoplay muted loop playsinline preload="auto">
-          <source src="https://aqua-opossum-124745.hostingersite.com/wp-content/uploads/2026/04/HumanRegeneratorWeb.mov" type="video/quicktime">
-          <source src="https://aqua-opossum-124745.hostingersite.com/wp-content/uploads/2026/04/HumanRegeneratorWeb.mov" type="video/mp4">
+        <video autoplay muted loop playsinline preload="auto" disablepictureinpicture disableremoteplayback>
+          <!-- Self-hosted H.264 main profile, faststart, žádný audio track —
+               aby autoplay fungoval na iOS i Android (původní .mov nepodporuje
+               Android Chrome a iOS strict autoplay rules). -->
+          <source src="videos/hero/hero.mp4" type="video/mp4">
         </video>
       </div>
 
