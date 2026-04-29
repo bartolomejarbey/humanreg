@@ -734,6 +734,8 @@ strong {
 
   .main-nav.is-open {
     display: flex;
+    flex-direction: column;
+    height: calc(100vh - var(--nav-height));
   }
 
   .main-nav__list {
