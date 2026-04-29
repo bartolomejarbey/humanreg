@@ -1022,41 +1022,167 @@
   line-height: 1.6;
 }
 
-/* === Nu Skin: JVi karotenoidy benefit grid === */
-.jvi-benefits {
+/* === Nu Skin: PILLAR GRID — doplňky stravy obecný přehled (4 cards) === */
+.pillar-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.25rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
-@media (min-width: 768px) {
-  .jvi-benefits {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem 2rem;
-  }
+@media (min-width: 600px) {
+  .pillar-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 }
-.jvi-benefit {
-  border-left: 2px solid var(--lime);
-  padding: 0.5rem 0 0.5rem 1.25rem;
+@media (min-width: 1024px) {
+  .pillar-grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
 }
-.jvi-benefit h4 {
+.pillar-card {
+  background-color: var(--pure-white);
+  padding: 2rem 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+.pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
+}
+.pillar-card__num {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--lime);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+.pillar-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 0.625rem;
+  color: var(--text);
+}
+.pillar-card p {
+  color: var(--text-body);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* === Nu Skin: JVi GRID — 6 nutrients cards === */
+.jvi-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+@media (min-width: 640px) {
+  .jvi-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+}
+@media (min-width: 1024px) {
+  .jvi-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+}
+.jvi-card {
+  background: linear-gradient(180deg, rgba(160, 200, 20, 0.04) 0%, transparent 100%);
+  border-top: 3px solid var(--lime);
+  padding: 1.75rem 1.5rem;
+  border-radius: 4px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.jvi-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--lime-dark);
+}
+.jvi-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 0.875rem;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.jvi-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.jvi-card li {
+  position: relative;
+  padding-left: 1.125rem;
+  color: var(--text-body);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  margin-bottom: 0.4rem;
+}
+.jvi-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--lime);
+}
+
+/* === Nu Skin: WHY GRID — proč si vybrat (4 cards centrované) === */
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 3rem;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 600px) {
+  .why-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+}
+@media (min-width: 1024px) {
+  .why-grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+}
+.why-card {
+  text-align: left;
+  padding: 1.75rem 1.5rem;
+  border-left: 3px solid var(--lime);
+  background-color: var(--cream);
+  border-radius: 0 6px 6px 0;
+}
+.why-card__num {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--lime-dark);
+  margin-bottom: 0.5rem;
+}
+.why-card h3 {
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: var(--lime-dark);
+  color: var(--text);
 }
-.section--beige .jvi-benefit h4 {
-  color: var(--lime-dark);
-}
-.section--dark .jvi-benefit h4,
-.section--charcoal .jvi-benefit h4 {
-  color: var(--lime);
-}
-.jvi-benefit__note {
-  margin: 0;
-  color: var(--text-secondary);
+.why-card p {
+  color: var(--text-body);
   font-size: 0.9375rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* === CTA banner: eyebrow tag === */
+.cta-band__eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--lime);
+  margin-bottom: 1rem;
 }
 
 /* === Nu Skin: video grid (3 self-hosted MP4 vedle sebe) === */
@@ -1071,12 +1197,7 @@
   .nuskin-video-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-  }
-}
-@media (min-width: 1100px) {
-  .nuskin-video-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.25rem;
+    max-width: 980px;
   }
 }
 .nuskin-video-grid__item {
