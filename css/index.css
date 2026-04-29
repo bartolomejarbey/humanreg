@@ -18,6 +18,18 @@
   background-color: var(--black);
 }
 
+/* Mobile: aspect-ratio 16:9 dělá hero příliš krátký (~220px na 390px wide),
+   text content (h1 + body + CTA) přetéká. Přepneme na auto height
+   s min-height, aby se text vešel komfortně. JS dropu AR neaplikuje
+   pod 768px (viz js/index.js). */
+@media (max-width: 768px) {
+  .hero {
+    aspect-ratio: auto;
+    min-height: 92vh;
+    max-height: none;
+  }
+}
+
 .hero__video-bg {
   position: absolute;
   inset: 0;

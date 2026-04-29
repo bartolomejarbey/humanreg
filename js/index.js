@@ -80,18 +80,26 @@
 
   /* --- Hero AR sync: nastav aspect-ratio kontejneru přesně podle videa.
      Tím dosáhneme: žádné černé pruhy (jako u contain), žádný crop loga
-     (jako u cover) — protože kontejner má přesný AR videa. --- */
+     (jako u cover) — protože kontejner má přesný AR videa.
+     POZN: pod 768px (mobil) AR nepřepisuje — tam má hero auto height
+     a min-height z CSS, jinak by hero text přetékal. --- */
   var heroEl = document.querySelector(".hero");
   if (heroVideo && heroEl) {
-    var setAspect = function () {
+    var applyAspectIfDesktop = function () {
+      if (window.innerWidth < 768) {
+        heroEl.style.aspectRatio = "";
+        return;
+      }
       if (heroVideo.videoWidth > 0 && heroVideo.videoHeight > 0) {
         heroEl.style.aspectRatio = heroVideo.videoWidth + " / " + heroVideo.videoHeight;
       }
     };
     if (heroVideo.readyState >= 1) {
-      setAspect();
+      applyAspectIfDesktop();
     } else {
-      heroVideo.addEventListener("loadedmetadata", setAspect);
+      heroVideo.addEventListener("loadedmetadata", applyAspectIfDesktop);
     }
+    // Re-apply on resize (přepnutí orientace, devtools)
+    window.addEventListener("resize", applyAspectIfDesktop);
   }
 })();
