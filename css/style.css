@@ -987,7 +987,9 @@ strong {
   height: 100%;
   object-fit: cover;
   object-position: center 62%;
-  filter: brightness(0) invert(1);
+  /* refresh-studio-nav.png je pre-convertovaná: černé → bílé, zelené zachované.
+     Filter NESMÍ být aktivní, jinak by zelené ztratily barvu. */
+  filter: none;
   transition: none;
   margin: 0;
   max-width: none;
