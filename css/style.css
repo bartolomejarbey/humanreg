@@ -964,47 +964,52 @@ strong {
    Container AR ladí s content AR → object-fit: contain, žádný cropping,
    žádný filter. Responsive sizes jsou ve stejném bloku za base rule, aby
    source-order cascading správně přepsal base na malých viewportech. */
+/* TEST VARIANT C: overflow approach. Logo wrap > navbar height,
+   align-self: flex-start drží wrap u horního okraje navbaru, takže
+   přesahuje DOLŮ. Header má overflow: visible, takže to není clipped. */
 .site-header .site-logo.site-logo--nav {
   display: block;
-  width: 268px;
-  height: 74px;
+  width: 340px;
+  height: 96px;
   flex-shrink: 0;
   position: relative;
+  align-self: flex-start;
+  margin-top: 0;
 }
 .site-header .site-logo.site-logo--nav img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  object-position: left center;
+  object-position: left top;
   filter: none;
   transition: none;
   margin: 0;
   max-width: none;
 }
 .site-header.scrolled .site-logo.site-logo--nav {
-  width: 218px;
-  height: 60px;
+  width: 268px;
+  height: 76px;
 }
 
 @media (max-width: 1024px) {
   .site-header .site-logo.site-logo--nav {
-    width: 230px;
-    height: 64px;
+    width: 290px;
+    height: 82px;
   }
   .site-header.scrolled .site-logo.site-logo--nav {
-    width: 196px;
-    height: 54px;
+    width: 238px;
+    height: 68px;
   }
 }
 
 @media (max-width: 480px) {
   .site-header .site-logo.site-logo--nav {
-    width: 178px;
-    height: 50px;
+    width: 248px;
+    height: 70px;
   }
   .site-header.scrolled .site-logo.site-logo--nav {
-    width: 160px;
-    height: 44px;
+    width: 198px;
+    height: 56px;
   }
 }
 
