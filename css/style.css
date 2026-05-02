@@ -782,13 +782,8 @@ strong {
     height: var(--nav-height);
   }
 
-  /* Navbar logo responsive sizes jsou teď v dedikovaném bloku níž (kvůli
-     správnému source-order cascading proti base rule). Tady řešíme jen footer. */
-  .footer-about .site-logo--footer {
-    width: 200px;
-    height: 92px;
-    margin-left: 0;
-  }
+  /* Navbar + footer logo responsive sizes jsou teď v dedikovaném bloku níž
+     (kvůli správnému source-order cascading proti base rule). */
 
   /* Služby dropdown na mobilu — inline, ne floating overlay */
   .main-nav__item--dropdown {
@@ -872,12 +867,9 @@ strong {
    a později definované rule by vyhrála. Protože tento default je nyní
    PŘED media bloky, mobile rule (display: flex) v @media wins on mobile. */
 
-/* Velmi malé telefony — iPhone SE, Galaxy A */
+/* Velmi malé telefony — iPhone SE, Galaxy A.
+   Footer logo @media je za base rulem níž v souboru (source-order). */
 @media (max-width: 480px) {
-  .footer-about .site-logo--footer {
-    width: 170px;
-    height: 78px;
-  }
   .header-inner {
     padding: 0.5rem 1rem;
   }
@@ -936,25 +928,22 @@ strong {
   filter: brightness(0) invert(1);
 }
 
-/* === FOOTER LOGO (6-3.png) — kontejner s pevnou výškou + object-fit cover.
-   PNG má cca 50 % whitespace okolo, takže object-fit cover s object-position
-   62 % cropuje whitespace a zachová logo content vidět správně. Filter invert
-   převádí dark text + profily na bílou siluetu pro dark footer. === */
+/* === FOOTER LOGO === refresh-studio-footer.png je pre-konvertovaná stejně
+   jako navbar verze: ČERNÁ → bílá (silueta + text), LIME list + tmavě zelená
+   pravá hlava ZACHOVANÉ. AR 3.65. object-fit: contain, žádný filter. */
 .footer-about .site-logo--footer {
   display: block;
-  width: 240px;
-  height: 110px;
+  width: 260px;
+  height: 71px;
   margin-bottom: 1.5rem;
-  margin-left: -0.5rem;
-  overflow: hidden;
+  margin-left: -0.25rem;
   position: relative;
 }
 .footer-about .site-logo--footer img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 62%;
-  filter: brightness(0) invert(1);
+  object-fit: contain;
+  object-position: left center;
   transition: none;
 }
 
@@ -969,8 +958,8 @@ strong {
    přesahuje DOLŮ. Header má overflow: visible, takže to není clipped. */
 .site-header .site-logo.site-logo--nav {
   display: block;
-  width: 340px;
-  height: 96px;
+  width: 300px;
+  height: 82px;
   flex-shrink: 0;
   position: relative;
   align-self: flex-start;
@@ -987,29 +976,44 @@ strong {
   max-width: none;
 }
 .site-header.scrolled .site-logo.site-logo--nav {
-  width: 268px;
-  height: 76px;
+  width: 250px;
+  height: 68px;
 }
 
 @media (max-width: 1024px) {
   .site-header .site-logo.site-logo--nav {
-    width: 290px;
-    height: 82px;
+    width: 260px;
+    height: 71px;
   }
   .site-header.scrolled .site-logo.site-logo--nav {
-    width: 238px;
-    height: 68px;
+    width: 220px;
+    height: 60px;
   }
 }
 
 @media (max-width: 480px) {
   .site-header .site-logo.site-logo--nav {
-    width: 248px;
-    height: 70px;
+    width: 220px;
+    height: 60px;
   }
   .site-header.scrolled .site-logo.site-logo--nav {
-    width: 198px;
-    height: 56px;
+    width: 180px;
+    height: 49px;
+  }
+}
+
+/* Footer logo responsive — musí být ZA base rulem (line ~943) kvůli source-order. */
+@media (max-width: 1024px) {
+  .footer-about .site-logo--footer {
+    width: 220px;
+    height: 60px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 480px) {
+  .footer-about .site-logo--footer {
+    width: 200px;
+    height: 55px;
   }
 }
 

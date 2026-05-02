@@ -142,6 +142,15 @@
   object-fit: cover;
 }
 
+/* Nu Skin produktové fotky mají různá native AR — neoříznout, ukázat celé. */
+.content-block__media--natural img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  max-height: 520px;
+}
+
 /* Thin lime frame offset behind content block images */
 .content-block__media--framed {
   position: relative;
