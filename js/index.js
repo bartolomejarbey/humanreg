@@ -6,14 +6,22 @@
 (function () {
   "use strict";
 
-  /* --- Hero intro: 3s clean video → darken overlay → fade-in content --- */
+  /* --- Hero intro: na desktopu 3s clean video → darken → fade-in content.
+     Na mobilu video neloaduje (media query <768px), takže cinematic delay
+     ztrácí smysl — text se objeví okamžitě (200ms fade-in). --- */
   var heroOverlay = document.getElementById("heroOverlay");
   var heroContent = document.getElementById("heroContent");
   var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var isMobile = window.matchMedia("(max-width: 767px)").matches;
 
-  if (reducedMotion) {
+  if (reducedMotion || isMobile) {
     if (heroOverlay) heroOverlay.classList.add("darken");
-    if (heroContent) heroContent.classList.add("visible");
+    if (heroContent) {
+      // Krátký rAF aby fade-in transition stihl proběhnout místo skoku.
+      requestAnimationFrame(function () {
+        heroContent.classList.add("visible");
+      });
+    }
   } else {
     if (heroOverlay) {
       setTimeout(function () {
