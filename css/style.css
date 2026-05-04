@@ -682,6 +682,17 @@ strong {
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
   z-index: 1100;
 }
+/* Invisible bridge — prevents dropdown closing když myš přechází z toggle
+   přes 4px gap. Bez bridge mouseleave zavře dropdown dřív než klient stihne
+   najet na položku. */
+.main-nav__dropdown::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: -10px;
+  right: -10px;
+  height: 14px;
+}
 .main-nav__item--dropdown:hover .main-nav__dropdown,
 .main-nav__item--dropdown:focus-within .main-nav__dropdown,
 .main-nav__dropdown-toggle[aria-expanded="true"] + .main-nav__dropdown {

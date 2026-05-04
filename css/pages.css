@@ -284,21 +284,22 @@
 
 .feature-item__icon {
   flex-shrink: 0;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--charcoal);
+  background-color: var(--lime);
   border-radius: 50%;
+  box-shadow: 0 4px 16px var(--lime-glow);
 }
 
 .feature-item__icon img {
-  width: 64px;
-  height: 64px;
+  width: 84px;
+  height: 84px;
   object-fit: contain;
-  /* Nová sada (v2/1-9.png) je lime line-art na transparentu → bez filtru,
-     dark kruh poskytuje kontrast. */
+  /* Lime line-art ikony invertované na černé pro max kontrast na lime kruhu. */
+  filter: brightness(0);
 }
 
 .feature-item h3 {
