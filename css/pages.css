@@ -289,7 +289,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--lime);
+  background-color: var(--charcoal);
   border-radius: 50%;
 }
 
@@ -297,9 +297,8 @@
   width: 64px;
   height: 64px;
   object-fit: contain;
-  /* Šárčina sada má smíšené barvy (SVG černé, PNG lime). brightness(0) sjednotí
-     na černé siluety → max kontrast na lime kruhu. */
-  filter: brightness(0);
+  /* Nová sada (v2/1-9.png) je lime line-art na transparentu → bez filtru,
+     dark kruh poskytuje kontrast. */
 }
 
 .feature-item h3 {
