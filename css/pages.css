@@ -1335,9 +1335,10 @@
     font-size: 1.625rem;
   }
 
-  /* Page hero — menší typografie na mobilu */
+  /* Page hero — menší typografie na mobilu, ale top padding musí počítat
+     s fixed navbar (78 px) + safe gap, jinak page-hero__tag mizí pod navbarem. */
   .page-hero {
-    padding: 4rem 0 3rem;
+    padding: calc(var(--nav-height) + 2rem) 0 3rem;
   }
   .page-hero h1 {
     font-size: 2.25rem;
