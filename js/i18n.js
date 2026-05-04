@@ -17,11 +17,14 @@
     /* ===== NAVBAR (shared on all pages) ===== */
     'nav.about':           { en: 'About us',         de: 'Über uns',           pl: 'O nas' },
     'nav.hr':              { en: 'Human Regenerator',de: 'Human Regenerator',  pl: 'Human Regenerator' },
+    'nav.services':        { en: 'Services',         de: 'Leistungen',         pl: 'Usługi' },
     'nav.kegel':           { en: 'EMS Kegel Chair',  de: 'EMS Kegel Chair',    pl: 'EMS Kegel Chair' },
     'nav.masaze':          { en: 'Massages',         de: 'Massagen',           pl: 'Masaże' },
+    'nav.nuskin':          { en: 'Nu Skin',          de: 'Nu Skin',            pl: 'Nu Skin' },
     'nav.cenik':           { en: 'Pricing / Vouchers',de: 'Preise / Gutscheine',pl: 'Cennik / Vouchery' },
     'nav.kontakt':         { en: 'Contact',          de: 'Kontakt',            pl: 'Kontakt' },
     'nav.phone_label':     { en: 'For booking call', de: 'Buchung unter',      pl: 'Rezerwacja' },
+    'nav.book_btn':        { en: 'Book now',         de: 'Termin buchen',      pl: 'Zarezerwuj' },
     'nav.skip_link':       { en: 'Skip to content',  de: 'Zum Inhalt springen',pl: 'Przejdź do treści' },
 
     /* ===== FOOTER (shared) ===== */
