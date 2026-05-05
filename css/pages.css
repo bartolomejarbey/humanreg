@@ -1194,7 +1194,11 @@
   margin-bottom: 1rem;
 }
 
-/* === Nu Skin: video grid (3 self-hosted MP4 vedle sebe) === */
+/* === Nu Skin: video grid (4 click-to-modal tiles, uniform 16:9) ===
+   Tiles jsou stejně velké aspect-ratio 16/9 → konzistentní kompozice
+   bez ohledu na intrinsic AR jednotlivých videí. Žádný preload — videa
+   se stáhnou až po kliknutí v modálu (mobile data + Safari autoplay
+   restrictions). */
 .nuskin-video-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1205,7 +1209,7 @@
 @media (min-width: 768px) {
   .nuskin-video-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 1.75rem;
     max-width: 980px;
   }
 }
@@ -1214,13 +1218,62 @@
   display: flex;
   flex-direction: column;
 }
-.nuskin-video-grid__item video {
+.nuskin-video-trigger {
+  position: relative;
   display: block;
   width: 100%;
-  height: auto;
-  background-color: var(--black);
-  border-radius: 4px;
+  aspect-ratio: 16 / 9;
+  background-color: var(--charcoal);
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font: inherit;
+  color: inherit;
+}
+.nuskin-video-trigger::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.45) 100%);
+  pointer-events: none;
+}
+.nuskin-video-trigger:hover,
+.nuskin-video-trigger:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+.nuskin-video-trigger__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: var(--lime);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 2;
+}
+.nuskin-video-trigger:hover .nuskin-video-trigger__play,
+.nuskin-video-trigger:focus-visible .nuskin-video-trigger__play {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+.nuskin-video-trigger__play svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--charcoal);
+  margin-left: 4px;
 }
 .nuskin-video-grid__item figcaption {
   font-family: var(--font-body);
@@ -1229,6 +1282,57 @@
   text-align: center;
   margin-top: 0.75rem;
   letter-spacing: 0.02em;
+}
+
+/* === Video modal (sdílený, na nuskin.html i jinde použitelný) === */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+.video-modal.is-active {
+  display: flex;
+}
+.video-modal__inner {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+}
+.video-modal__inner video {
+  display: block;
+  width: 100%;
+  max-height: 80vh;
+  background: #000;
+  border-radius: 4px;
+}
+.video-modal__close {
+  position: absolute;
+  top: -2.75rem;
+  right: 0;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.video-modal__close:hover,
+.video-modal__close:focus-visible {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.7);
+  outline: none;
 }
 
 /* === Benefits list — center variant pro homepage / sekce s textem dosaď === */

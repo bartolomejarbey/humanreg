@@ -176,4 +176,53 @@
       statsObserver.observe(el);
     });
   }
+
+  /* --- Video modal: click-to-play self-hosted MP4 (nuskin tiles).
+     Žádný preload v <video> dokud user neklikne → mobile data + Safari
+     autoplay restrictions: vždy spuštěno user gestem, takže funguje i iOS. */
+  var videoModal = document.getElementById("videoModal");
+  var videoModalPlayer = document.getElementById("videoModalPlayer");
+  var videoTriggers = document.querySelectorAll(".nuskin-video-trigger");
+
+  if (videoModal && videoModalPlayer && videoTriggers.length > 0) {
+    var videoModalClose = videoModal.querySelector(".video-modal__close");
+
+    function openVideoModal(src) {
+      videoModalPlayer.src = src;
+      videoModal.classList.add("is-active");
+      document.body.style.overflow = "hidden";
+      // Play až po short delay aby src stihl propagate (Safari quirk)
+      setTimeout(function () {
+        var p = videoModalPlayer.play();
+        if (p && typeof p.catch === "function") p.catch(function () {});
+      }, 50);
+    }
+
+    function closeVideoModal() {
+      videoModalPlayer.pause();
+      videoModalPlayer.removeAttribute("src");
+      videoModalPlayer.load();
+      videoModal.classList.remove("is-active");
+      document.body.style.overflow = "";
+    }
+
+    videoTriggers.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var src = btn.getAttribute("data-video-src");
+        if (src) openVideoModal(src);
+      });
+    });
+
+    if (videoModalClose) videoModalClose.addEventListener("click", closeVideoModal);
+
+    videoModal.addEventListener("click", function (e) {
+      if (e.target === videoModal) closeVideoModal();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && videoModal.classList.contains("is-active")) {
+        closeVideoModal();
+      }
+    });
+  }
 })();

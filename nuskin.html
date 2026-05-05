@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css?v=20260502-9">
-  <link rel="stylesheet" href="css/pages.css?v=20260502-9">
+  <link rel="stylesheet" href="css/style.css?v=20260502-10">
+  <link rel="stylesheet" href="css/pages.css?v=20260502-10">
 </head>
 <body>
 
@@ -400,31 +400,27 @@
 
         <div class="nuskin-video-grid">
           <figure class="nuskin-video-grid__item">
-            <video controls preload="metadata" playsinline>
-              <source src="videos/nuskin/ageloc-boost-before-after.mp4" type="video/mp4">
-              Váš prohlížeč nepodporuje přehrávání videa.
-            </video>
+            <button type="button" class="nuskin-video-trigger" data-video-src="videos/nuskin/ageloc-boost-before-after.mp4" data-video-caption="ageLOC Boost — výsledky před a po" aria-label="Přehrát video: ageLOC Boost — výsledky před a po">
+              <span class="nuskin-video-trigger__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </button>
             <figcaption data-i18n="nuskin.video.cap1">ageLOC Boost — výsledky před a&nbsp;po</figcaption>
           </figure>
           <figure class="nuskin-video-grid__item">
-            <video controls preload="metadata" playsinline>
-              <source src="videos/nuskin/galvanic-spa-program.mp4" type="video/mp4">
-              Váš prohlížeč nepodporuje přehrávání videa.
-            </video>
+            <button type="button" class="nuskin-video-trigger" data-video-src="videos/nuskin/galvanic-spa-program.mp4" data-video-caption="ageLOC Galvanic Spa — program 1" aria-label="Přehrát video: ageLOC Galvanic Spa — program 1">
+              <span class="nuskin-video-trigger__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </button>
             <figcaption data-i18n="nuskin.video.cap2">ageLOC Galvanic Spa — program 1</figcaption>
           </figure>
           <figure class="nuskin-video-grid__item">
-            <video controls preload="metadata" playsinline>
-              <source src="videos/nuskin/elsa-face-focus.mp4" type="video/mp4">
-              Váš prohlížeč nepodporuje přehrávání videa.
-            </video>
+            <button type="button" class="nuskin-video-trigger" data-video-src="videos/nuskin/elsa-face-focus.mp4" data-video-caption="ELSA Face Focus — ukázka ošetření" aria-label="Přehrát video: ELSA Face Focus — ukázka ošetření">
+              <span class="nuskin-video-trigger__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </button>
             <figcaption data-i18n="nuskin.video.cap3">ELSA Face Focus — ukázka ošetření</figcaption>
           </figure>
           <figure class="nuskin-video-grid__item">
-            <video controls preload="metadata" playsinline>
-              <source src="videos/nuskin/prysm-io-maintenance.mp4" type="video/mp4">
-              Váš prohlížeč nepodporuje přehrávání videa.
-            </video>
+            <button type="button" class="nuskin-video-trigger" data-video-src="videos/nuskin/prysm-io-maintenance.mp4" data-video-caption="PRYSM iO — kalibrace a údržba" aria-label="Přehrát video: PRYSM iO — kalibrace a údržba">
+              <span class="nuskin-video-trigger__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </button>
             <figcaption data-i18n="nuskin.video.cap4">PRYSM iO — kalibrace a&nbsp;údržba</figcaption>
           </figure>
         </div>
@@ -528,8 +524,16 @@
     </a>
   </div>
 
-  <script src="js/main.js?v=20260502-9"></script>
-  <script src="js/i18n.js?v=20260502-9"></script>
+  <!-- Video modal — sdílený pro nuskin video tiles -->
+  <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Přehrávač videa">
+    <div class="video-modal__inner">
+      <button type="button" class="video-modal__close" aria-label="Zavřít">×</button>
+      <video id="videoModalPlayer" controls playsinline preload="none"></video>
+    </div>
+  </div>
+
+  <script src="js/main.js?v=20260502-10"></script>
+  <script src="js/i18n.js?v=20260502-10"></script>
 
 </body>
 </html>
