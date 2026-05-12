@@ -1,0 +1,16 @@
+{
+  "name": "Refresh Studio Kadaň",
+  "short_name": "Refresh Studio",
+  "description": "Komplexní péče a regenerace pro vaše tělo i mysl. Human Regenerator, EMS Kegel Chair, masáže a Nu Skin v Kadani.",
+  "lang": "cs",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "theme_color": "#A0C814",
+  "background_color": "#0E0E0E",
+  "icons": [
+    { "src": "/images/favicon/favicon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/images/favicon/favicon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/images/favicon/favicon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
