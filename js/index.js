@@ -48,7 +48,7 @@
       cinemaFrame.src =
         "https://www.youtube.com/embed/" +
         videoId +
-        "?autoplay=1&rel=0&modestbranding=1";
+        "?autoplay=1&mute=0&rel=0&modestbranding=1";
       cinema.classList.add("is-active");
       document.body.style.overflow = "hidden";
       closeBtn.tabIndex = 0;
