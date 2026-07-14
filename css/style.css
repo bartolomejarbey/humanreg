@@ -1117,17 +1117,24 @@ strong {
   color: var(--lime);
 }
 
-/* --- SCROLL REVEAL (works for both .fade-in and .reveal) --- */
-.fade-in,
-.reveal {
+/* --- SCROLL REVEAL (works for both .fade-in and .reveal) ---
+   PROGRESSIVE ENHANCEMENT: the invisible start-state is scoped to html.js,
+   which is set synchronously by a small inline <head> script. Without JS —
+   or if the reveal script fails to load/run — content stays fully visible
+   instead of leaving the page blank below the hero. A viewport-aware JS
+   failsafe (same inline script) also reveals elements as they scroll into
+   view, independent of IntersectionObserver, so a broken/quirky observer
+   (e.g. old iOS Safari on a tall section) can never leave content hidden. */
+.js .fade-in,
+.js .reveal {
   opacity: 0;
   transform: translateY(32px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.fade-in.is-visible,
-.reveal.is-visible,
-.reveal.visible {
+.js .fade-in.is-visible,
+.js .reveal.is-visible,
+.js .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1144,10 +1151,10 @@ strong {
   transition-delay: 0.3s;
 }
 
-/* Respect reduced motion */
+/* Respect reduced motion — keep .js specificity so it overrides .js .reveal */
 @media (prefers-reduced-motion: reduce) {
-  .fade-in,
-  .reveal {
+  .js .fade-in,
+  .js .reveal {
     opacity: 1;
     transform: none;
     transition: none;
