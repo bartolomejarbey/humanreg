@@ -186,11 +186,15 @@
 
   if (videoModal && videoModalPlayer && videoTriggers.length > 0) {
     var videoModalClose = videoModal.querySelector(".video-modal__close");
+    var lastVideoTrigger = null;
 
-    function openVideoModal(src) {
+    function openVideoModal(src, trigger) {
+      lastVideoTrigger = trigger || null;
       videoModalPlayer.src = src;
       videoModal.classList.add("is-active");
       document.body.style.overflow = "hidden";
+      // Přesuň fokus do modalu (a11y: dialog musí dostat fokus)
+      if (videoModalClose) videoModalClose.focus();
       // Play až po short delay aby src stihl propagate (Safari quirk)
       setTimeout(function () {
         var p = videoModalPlayer.play();
@@ -204,12 +208,15 @@
       videoModalPlayer.load();
       videoModal.classList.remove("is-active");
       document.body.style.overflow = "";
+      // Vrať fokus na spouštěcí tlačítko
+      if (lastVideoTrigger && typeof lastVideoTrigger.focus === "function") lastVideoTrigger.focus();
+      lastVideoTrigger = null;
     }
 
     videoTriggers.forEach(function (btn) {
       btn.addEventListener("click", function () {
         var src = btn.getAttribute("data-video-src");
-        if (src) openVideoModal(src);
+        if (src) openVideoModal(src, btn);
       });
     });
 
@@ -220,8 +227,33 @@
     });
 
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && videoModal.classList.contains("is-active")) {
+      if (!videoModal.classList.contains("is-active")) return;
+      if (e.key === "Escape") {
         closeVideoModal();
+        return;
+      }
+      // Focus trap: drž Tab uvnitř modalu
+      if (e.key === "Tab") {
+        var nodes = videoModal.querySelectorAll(
+          'button, [href], video[controls], [tabindex]:not([tabindex="-1"])'
+        );
+        var focusables = [];
+        for (var i = 0; i < nodes.length; i++) {
+          if (nodes[i] === videoModalClose || nodes[i].offsetParent !== null) focusables.push(nodes[i]);
+        }
+        if (!focusables.length) return;
+        var first = focusables[0];
+        var last = focusables[focusables.length - 1];
+        if (focusables.indexOf(document.activeElement) === -1) {
+          e.preventDefault();
+          first.focus();
+        } else if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
       }
     });
   }

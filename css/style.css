@@ -286,6 +286,7 @@ strong {
 /* --- BUTTONS --- */
 .btn {
   display: inline-block;
+  max-width: 100%;
   font-family: var(--font-body);
   font-size: 0.8125rem;
   font-weight: 700;

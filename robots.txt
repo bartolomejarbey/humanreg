@@ -4,4 +4,4 @@ Allow: /
 # Žádné stránky k blokování — celý web je veřejný marketingový obsah.
 # Citlivé endpointy (form submit) jsou na externím Formspree, ne tady.
 
-Sitemap: https://refreshstudio.cz/sitemap.xml
+Sitemap: https://www.refreshstudio.cz/sitemap.xml

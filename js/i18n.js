@@ -32,6 +32,7 @@
                              de: 'Refresh Studio in Kadaň bietet umfassende Regeneration für Körper und Geist. Moderne Technologie und traditionelle Methoden in angenehmer Umgebung.',
                              pl: 'Refresh Studio w Kadaniu oferuje kompleksową regenerację dla ciała i umysłu. Nowoczesne technologie i tradycyjne metody w przyjemnym otoczeniu.' },
     'footer.heading_nav':  { en: 'Navigation', de: 'Navigation', pl: 'Nawigacja' },
+    'footer.privacy':      { en: 'Privacy policy', de: 'Datenschutz', pl: 'Polityka prywatności' },
     'footer.heading_kontakt':{ en: 'Contact',  de: 'Kontakt',   pl: 'Kontakt' },
     'footer.copyright':    { en: '© 2026 Refresh Studio Kadaň. All rights reserved.',
                              de: '© 2026 Refresh Studio Kadaň. Alle Rechte vorbehalten.',
@@ -179,6 +180,7 @@
                              de: 'Buchen Sie heute und spüren Sie selbst den Unterschied.',
                              pl: 'Zarezerwuj już dziś i poczuj różnicę na własnej skórze.' },
     'idx.cta.btn':         { en: 'Book now',     de: 'Jetzt buchen', pl: 'Zarezerwuj teraz' },
+    'idx.cta.eyebrow':     { en: 'Your regeneration starts here', de: 'Ihre Regeneration beginnt hier', pl: 'Twoja regeneracja zaczyna się tutaj' },
 
     /* ===== HR PAGE (human-regenerator.html) ===== */
     'hr.title':            { en: 'Human Regenerator — Refresh Studio Kadaň',
@@ -466,6 +468,10 @@
                              pl: 'Tak. Po zabiegu nie ma żadnych ograniczeń — możesz od razu wrócić do pracy, prowadzić auto, uprawiać sport lub kontynuować swój dzień. Żadnej rekonwalescencji, bólu ani przerw w normalnym życiu.' },
 
     'ems.cta.h2':          { html: true, en: 'Start with <em>strengthening the pelvic floor</em>', de: 'Beginnen Sie mit der <em>Stärkung des Beckenbodens</em>', pl: 'Zacznij <em>wzmacniać dno miednicy</em>' },
+    'ems.video.label':     { en: 'Preview',            de: 'Vorschau',          pl: 'Podgląd' },
+    'ems.video.h2':        { html: true, en: 'How the procedure <em>looks in practice</em>', de: 'Wie die Behandlung <em>in der Praxis aussieht</em>', pl: 'Jak zabieg <em>wygląda w praktyce</em>' },
+    'ems.gal.label':       { en: 'Our studio',         de: 'Unser Studio',      pl: 'Nasze studio' },
+    'ems.gal.h2':          { html: true, en: 'A look into the <em>therapy room</em>', de: 'Ein Blick in den <em>Behandlungsraum</em>', pl: 'Spojrzenie do <em>gabinetu terapeutycznego</em>' },
 
     /* ===== MASÁŽE ===== */
     'mas.title':           { en: 'Massages — Refresh Studio Kadaň', de: 'Massagen — Refresh Studio Kadaň', pl: 'Masaże — Refresh Studio Kadaň' },
@@ -519,8 +525,8 @@
     /* row names */
     'cen.r.hr1.name':      { en: 'Human Regenerator — single session',         de: 'Human Regenerator — einzelne Sitzung',           pl: 'Human Regenerator — pojedyncza sesja' },
     'cen.r.hr1.dur':       { en: '30 minutes',         de: '30 Minuten',         pl: '30 minut' },
-    'cen.r.ems1.name':     { en: 'EMS KEGEL pelvic chair — five sessions',   de: 'EMS KEGEL Beckenstuhl — fünf Sitzungen',          pl: 'EMS KEGEL fotel miedniczny — pięć sesji' },
-    'cen.r.ems1.dur':      { en: '5× 30 minutes',     de: '5× 30 Minuten',     pl: '5× 30 minut' },
+    'cen.r.ems1.name':     { en: 'EMS KEGEL pelvic chair — single session',  de: 'EMS KEGEL Beckenstuhl — einzelne Sitzung',        pl: 'EMS KEGEL fotel miedniczny — pojedyncza sesja' },
+    'cen.r.ems1.dur':      { en: '30 minutes',        de: '30 Minuten',        pl: '30 minut' },
     'cen.r.oxy1.name':     { en: 'Oxyceutical René d\'essey — bioavailable oxygen treatment', de: 'Oxyceutical René d\'essey — Behandlung mit bioverfügbarem Sauerstoff', pl: 'Oxyceutical René d\'essey — zabieg z biodostępnym tlenem' },
     'cen.r.oxy1.dur':      { en: '60 minutes',        de: '60 Minuten',        pl: '60 minut' },
     'cen.r.oxy2.name':     { en: 'Bodytoneup René d\'essey — ultra firming body treatment', de: 'Bodytoneup René d\'essey — ultra-straffende Körperbehandlung', pl: 'Bodytoneup René d\'essey — ultra ujędrniający zabieg na ciało' },
@@ -551,6 +557,25 @@
                              de: 'Paraffinbad und Handpackung zur Rückenmassage (EMPFEHLENSWERT)',
                              pl: 'Kąpiel parafinowa i okład na ręce do masażu pleców (POLECAMY)' },
     'cen.r.z1.dur':        { en: '20 minutes',        de: '20 Minuten',        pl: '20 minut' },
+
+    /* row names/durations added 2026-07-14 (previously untranslated → mixed-language table) */
+    'cen.r.hr2.name':      { en: 'Human Regenerator — three procedures',      de: 'Human Regenerator — drei Behandlungen',           pl: 'Human Regenerator — trzy zabiegi' },
+    'cen.r.hr2.dur':       { en: '3× 30 minutes',     de: '3× 30 Minuten',     pl: '3× 30 minut' },
+    'cen.r.hr3.name':      { en: 'Human Regenerator — five therapies',        de: 'Human Regenerator — fünf Therapien',              pl: 'Human Regenerator — pięć terapii' },
+    'cen.r.hr3.dur':       { en: '5× 30 minutes',     de: '5× 30 Minuten',     pl: '5× 30 minut' },
+    'cen.r.ems2.name':     { en: 'EMS KEGEL pelvic chair — five sessions',    de: 'EMS KEGEL Beckenstuhl — fünf Sitzungen',          pl: 'EMS KEGEL fotel miedniczny — pięć sesji' },
+    'cen.r.ems2.dur':      { en: '5× 30 minutes',     de: '5× 30 Minuten',     pl: '5× 30 minut' },
+    'cen.s.5d':            { en: '5D massage chair',   de: '5D-Massagesessel',  pl: 'Fotel masujący 5D' },
+    'cen.r.5d1.name':      { en: '5D massage chair — single treatment',       de: '5D-Massagesessel — einzelne Behandlung',          pl: 'Fotel masujący 5D — pojedynczy zabieg' },
+    'cen.r.5d1.dur':       { en: '30 minutes',        de: '30 Minuten',        pl: '30 minut' },
+    'cen.r.5d2.name':      { en: '5D massage chair — five treatments',        de: '5D-Massagesessel — fünf Behandlungen',            pl: 'Fotel masujący 5D — pięć zabiegów' },
+    'cen.r.5d2.dur':       { en: '5× 30 minutes',     de: '5× 30 Minuten',     pl: '5× 30 minut' },
+    'cen.r.m11.name':      { en: 'Lower-limb lymphatic drainage with BTL device', de: 'Lymphdrainage der unteren Gliedmaßen mit BTL-Gerät', pl: 'Drenaż limfatyczny kończyn dolnych aparatem BTL' },
+    'cen.r.m11.dur':       { en: '50 minutes',        de: '50 Minuten',        pl: '50 minut' },
+    'cen.s.nuskin':        { en: 'NUSKIN products',    de: 'NUSKIN-Produkte',   pl: 'Produkty NUSKIN' },
+    'cen.r.nuskin.txt':    { en: 'NUSKIN products — individual product prices on request.',
+                             de: 'NUSKIN-Produkte — Einzelpreise der Produkte auf Anfrage.',
+                             pl: 'Produkty NUSKIN — cena poszczególnych produktów na życzenie.' },
 
     'cen.note':            { en: 'For the above procedures and services you can use the 10 + 1 free pass, which you can purchase at our studio. It is also possible to buy gift vouchers for services and procedures of the value you choose.',
                              de: 'Für die oben genannten Behandlungen und Leistungen können Sie die 10 + 1 gratis-Karte nutzen, die Sie in unserem Studio erwerben können. Es ist auch möglich, Geschenkgutscheine für Dienstleistungen und Behandlungen im Wert nach Ihren Möglichkeiten zu kaufen.',
@@ -615,6 +640,10 @@
     'kon.form.message':    { en: 'Message',                  de: 'Nachricht',                 pl: 'Wiadomość' },
     'kon.form.message_ph': { en: 'Your message (optional)',  de: 'Ihre Nachricht (optional)', pl: 'Twoja wiadomość (opcjonalnie)' },
     'kon.form.submit':     { en: 'Send message',             de: 'Nachricht senden',          pl: 'Wyślij wiadomość' },
+    'kon.form.privacy':    { html: true,
+                             en: 'By submitting you agree to the <a href="/zasady-ochrany-osobnich-udaju">processing of your personal data</a> for the purpose of handling your enquiry.',
+                             de: 'Mit dem Absenden stimmen Sie der <a href="/zasady-ochrany-osobnich-udaju">Verarbeitung Ihrer personenbezogenen Daten</a> zum Zweck der Bearbeitung Ihrer Anfrage zu.',
+                             pl: 'Wysyłając formularz, wyrażasz zgodę na <a href="/zasady-ochrany-osobnich-udaju">przetwarzanie Twoich danych osobowych</a> w celu obsługi zapytania.' },
 
     /* End of dictionary */
     '__end__': {}
@@ -702,7 +731,10 @@
 
     document.documentElement.lang = lang;
     document.querySelectorAll('.lang-switch a').forEach(function (a) {
-      a.classList.toggle('lang-active', a.dataset.lang === lang);
+      var active = a.dataset.lang === lang;
+      a.classList.toggle('lang-active', active);
+      if (active) a.setAttribute('aria-current', 'true');
+      else a.removeAttribute('aria-current');
     });
     cLang = lang;
     try { localStorage.setItem('refresh_lang', lang); } catch (e) {}
